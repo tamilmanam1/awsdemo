@@ -3,8 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
-      - echo $AWS_DEFAULT_REGION
+      - echo Logging in to Amazon ...
   build:
     commands:
       - echo Build started on `date`
@@ -12,3 +11,4 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - java -jar target\awsdemo-0.0.1-SNAPSHOT.jar
